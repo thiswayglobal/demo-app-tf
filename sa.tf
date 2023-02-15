@@ -7,6 +7,6 @@ resource "kubernetes_service_account" "this" {
       "eks.amazonaws.com/role-arn"         = module.this.arn
       "kubernetes.io/service-account.name" = var.irsa_sa
     }
-    type = "kubernetes.io/service-account-token"
   }
+  type = "kubernetes.io/service-account-token"
 }
