@@ -5,6 +5,7 @@ resource "kubernetes_service_account" "this" {
     namespace   = var.irsa_namespace
     annotations = {
       "eks.amazonaws.com/role-arn" = module.this.arn
+      "kubernetes.io/service-account.name" = var.irsa_sa
     }
   }
 }
