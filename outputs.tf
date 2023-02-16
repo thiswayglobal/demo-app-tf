@@ -7,7 +7,7 @@ output "irsa_arn" {
 
 resource "kubernetes_secret_v1" "output_secret" {
   metadata {
-    name      = "${var.env_name}-tf-output"
+    name      = "tf-output"
     namespace = var.irsa_namespace
   }
 
